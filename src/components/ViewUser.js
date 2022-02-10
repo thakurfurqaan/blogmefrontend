@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import APIService from "../APIService";
 import { useNavigate } from "react-router-dom";
 
 const ViewUser = () => {
@@ -23,7 +22,7 @@ const ViewUser = () => {
 
   return (
     <div className="">
-      <div className="container mt-5 p-3 col-sm-4">
+      <div className="container p-3 col-sm-4">
         <div className="card p-3 pt-5">
           <h4 className="App">Hey {username}, how are you?</h4>
 
