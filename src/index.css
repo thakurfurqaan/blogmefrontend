@@ -5,9 +5,20 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("/public/background.png") !important;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.card {
+   border: none !important;
+   box-shadow: 0 0px 35px rgb(50 50 93 / 10%), 0 0px 15px rgb(0 0 0 / 7%) !important;
+   border-radius: 15px !important;  
+}
+
+* {
+  font-family: 'Poppins', sans-serif; 
 }
