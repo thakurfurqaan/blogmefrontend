@@ -23,6 +23,8 @@ const Login = () => {
   });
 
   const loginBtn = () => {
+    setUsernameAlert("");
+    setNonFieldAlert("");
     isLoading(true);
     APIService.LoginUser({ username, password })
       .then((res) => {
@@ -41,12 +43,19 @@ const Login = () => {
   };
 
   const registerBtn = () => {
+    setUsernameAlert("");
+    setNonFieldAlert("");
     isLoading(true);
     APIService.RegisterUser({ username, password })
     .then((res) => {
         isLoading(false);
         if (!res.ok) {
-            setUsernameAlert(res.username[0]);
+            if (res.username[0].length != 1){
+                setUsernameAlert(res.username[0]);
+            } else {
+                setNonFieldAlert("Account created successfully!");
+            }
+            
         }
         console.log(res);
     })
