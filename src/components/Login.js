@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import APIService from "../APIService";
-import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
-import ReactDOM from "react-dom";
 
 const Login = () => {
   //   const [token, setToken] = useCookies(["mytoken"]);

@@ -10,7 +10,6 @@ import ViewUser from "./components/ViewUser";
 import { Route, BrowserRouter, Routes, Link } from "react-router-dom";
 import FileUpload from "./components/FileUpload";
 import ViewData from "./components/Data";
-import Nav from "./components/Nav";
 
 const Router = () => {
   return (
