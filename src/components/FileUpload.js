@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import APIService from "../APIService";
 import { useNavigate } from "react-router-dom";
+import Nav from "./Nav";
 
 const FileUpload = () => {
   let navigate = useNavigate();
@@ -9,6 +10,13 @@ const FileUpload = () => {
   const [fileProps, setFileProps] = useState(null);
   const [fileValid, setFileValid] = useState(false);
   const [alert, setAlert] = useState("");
+
+
+  useEffect(() => {
+    if (!localStorage.getItem("mytoken")) {
+      navigate("/");
+    } 
+  });
 
   const fileUpload = () => {
     if (fileValid && file) {
@@ -53,6 +61,7 @@ const FileUpload = () => {
 
   return (
     <div className="">
+      <Nav />
       <div className="container p-3 col-sm-8 col-lg-6">
         <div className="card p-4 pt-5">
           <h4 className="App mb-5">File Upload</h4>

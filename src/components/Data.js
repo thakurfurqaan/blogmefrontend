@@ -1,9 +1,19 @@
 import React, { useState, useEffect } from "react";
 import APIService from "../APIService";
+import { useNavigate } from "react-router-dom";
+import Nav from "./Nav";
 
 const ViewData = () => {
   const [data, setData] = useState("");
   const [users, setUsers] = useState([]);
+  let navigate = useNavigate();
+
+  useEffect(() => {
+    if (!localStorage.getItem("mytoken")) {
+      navigate("/");
+    } 
+  });
+
 
   useEffect(() => {
     APIService.GetData()
@@ -16,6 +26,7 @@ const ViewData = () => {
 
   return (
     <div className="">
+      <Nav />
       <div className="container p-3 col-sm-10">
         <div className="card p-3 pt-5">
           <h4 className="App mb-5">File Data</h4>

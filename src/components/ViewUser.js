@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import Nav from "./Nav";
 
 const ViewUser = () => {
   const [username, setUsername] = useState("");
@@ -22,6 +23,7 @@ const ViewUser = () => {
 
   return (
     <div className="">
+        <Nav />
       <div className="container p-3 col-sm-4">
         <div className="card p-3 pt-5">
           <h4 className="App">Hey {username}, how are you?</h4>

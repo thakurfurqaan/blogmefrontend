@@ -26,19 +26,6 @@ const Router = () => {
 
 ReactDOM.render(
   <React.StrictMode>
-    <div className="App mt-5 mb-0">
-      <div class="btn-group" role="group" aria-label="Basic example">
-        <a href="/" className="btn btn-light">
-          Login
-        </a>
-        <a href="/fileupload" className="btn btn-light">
-          File Upload
-        </a>
-        <a href="/viewdata" className="btn btn-light">
-          View File
-        </a>
-      </div>
-    </div>
     <Router />
 
     <p className="App text-light">
